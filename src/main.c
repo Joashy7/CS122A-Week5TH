@@ -44,6 +44,9 @@ int main() {
   char* q = &_binary____image1_bmp_start;
   show_bmp(q, 50, 0);  // display a logo
 
+  kprintf("Decimal: %d\n", 1000000000);
+  kprintf("Hexadecimal: 0x%x\n", 0xABCD);
+
   while (1) {
     color = GREEN;
     kprintf("enter a line from UART port : ");
@@ -52,7 +55,5 @@ int main() {
     uprintf(up, " line=%s\n", line);
     color = RED;
     kprintf("line=%s\n", line);
-    kprintf("Decimal: %d\n", 1000000000);
-    kprintf("Hexadecimal: 0x%x\n", 0xABCD);
   }
 }
