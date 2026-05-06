@@ -41,6 +41,9 @@ int main() {
   char* p = &_binary____image0_bmp_start;
   show_bmp(p, 0, 0);  // display a logo
 
+  char* q = &_binary____image1_bmp_start;
+  show_bmp(q, 0, 0);  // display a logo
+
   while (1) {
     color = GREEN;
     kprintf("enter a line from UART port : ");
