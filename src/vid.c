@@ -174,9 +174,12 @@ int kprints(char* s) {
 
 int krpx(int x) {
   char c;
-  if (x) {
+  // if (x) {
+  //   c = tab[x % 16];
+  //   krpx(x / 16);
+  // }
+  while (x /= 16){
     c = tab[x % 16];
-    krpx(x / 16);
   }
   kputc(c);
 }
@@ -193,9 +196,12 @@ int kprintx(int x) {
 
 int krpu(int x) {
   char c;
-  if (x) {
+  // if (x) {
+  //   c = tab[x % 10];
+  //   krpu(x / 10);
+  // }
+  while (x /= 10){
     c = tab[x % 10];
-    krpu(x / 10);
   }
   kputc(c);
 }
